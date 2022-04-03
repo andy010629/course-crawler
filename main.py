@@ -1,5 +1,4 @@
 import pymongo
-import pandas as pd
 from crawler import MCUCoursesCrawler
 
 db_client = pymongo.MongoClient("mongodb://localhost:27017/")

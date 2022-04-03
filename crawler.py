@@ -1,8 +1,6 @@
 import requests
 from bs4 import BeautifulSoup
 from format import *
-from tqdm import tqdm
-import pandas as pd
 import hashlib
 import os
 
@@ -43,7 +41,6 @@ def MCUCoursesCrawler():
           
             for course_tag in course_tags:
                 course_data = [(t.text) for t in course_tag.find_all('td')]
-
                 course_id, course_name = clean_special_char(course_data[1].split(
                     ' ')[0]), clean_special_char(course_data[1].split(' ')[1])
 
